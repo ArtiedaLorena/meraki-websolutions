@@ -105,6 +105,16 @@ export const services = [
 
 export const projects = [
   {
+    tag: "Estética vehicular",
+    title: "Aurea Detail — Detailing en Temperley",
+    description:
+      "Estudio de detailing con servicios, turnos por WhatsApp y una estética precisa para quienes quieren el auto como recién salido del taller.",
+    href: "https://aurea-detail.vercel.app/",
+    host: "aurea-detail.vercel.app",
+    image: "/projects/aurea-detail.webp",
+    imageAlt: "Captura del sitio Aurea Detail: estética vehicular en Temperley",
+  },
+  {
     tag: "Estudio de belleza",
     title: "Studiocrazy — Uñas & Pestañas",
     description:

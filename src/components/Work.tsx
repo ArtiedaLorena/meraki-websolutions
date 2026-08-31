@@ -15,7 +15,7 @@ export function Work() {
             Así se ve una web Meraki: clara, rápida y hecha para que te escriban.
           </p>
         </Reveal>
-        <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((item, index) => (
             <Reveal key={item.href} delayMs={index * 80}>
               <a
