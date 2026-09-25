@@ -27,21 +27,21 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
         scrolled || open
-          ? "border-line/80 bg-white/90 backdrop-blur-md"
-          : "border-transparent bg-white/80 backdrop-blur-sm"
+          ? "border-line bg-white/90 backdrop-blur-md"
+          : "border-transparent bg-white/70 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto flex h-[4.75rem] max-w-6xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
         <a
           href="#inicio"
-          className="flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+          className="flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turquoise"
         >
           <Image
             src="/brand/logo-mark.png"
             alt="Meraki Web Solutions"
             width={520}
             height={305}
-            className="h-14 w-auto bg-transparent object-contain mix-blend-multiply sm:h-16"
+            className="h-12 w-auto bg-transparent object-contain mix-blend-multiply sm:h-14"
             style={{ backgroundColor: "transparent" }}
             preload
             unoptimized
@@ -50,18 +50,18 @@ export function Header() {
             <span className="block font-display text-lg font-semibold tracking-tight text-navy sm:text-xl">
               Meraki
             </span>
-            <span className="block text-[0.7rem] font-medium tracking-[0.18em] text-muted uppercase sm:text-xs">
+            <span className="block text-[0.65rem] font-medium tracking-[0.2em] text-navy/50 uppercase">
               Web Solutions
             </span>
           </span>
         </a>
 
-        <nav aria-label="Principal" className="hidden items-center gap-6 lg:flex">
+        <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-navy/75 transition-colors hover:text-navy"
+              className="text-sm font-medium text-navy/60 transition-colors hover:text-navy"
             >
               {item.label}
             </a>
@@ -74,7 +74,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className={`${ctaCompact} h-11 w-11 sm:hidden`}
-            aria-label="Quiero mi página web por WhatsApp"
+            aria-label="Escribinos por WhatsApp"
           >
             <WhatsAppIcon className="h-5 w-5" />
           </a>
@@ -82,9 +82,9 @@ export function Header() {
             href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-navy px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-royal sm:inline-flex"
+            className={`max-sm:hidden ${ctaPrimary} !h-11 px-6`}
           >
-            Quiero mi web
+            Escribinos
           </a>
           <button
             type="button"
@@ -104,7 +104,7 @@ export function Header() {
       </div>
 
       <div id="menu-movil" hidden={!open} className="border-t border-line bg-white lg:hidden">
-        <nav aria-label="Móvil" className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
+        <nav aria-label="Móvil" className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -123,7 +123,7 @@ export function Header() {
             onClick={() => setOpen(false)}
           >
             <WhatsAppIcon />
-            Quiero mi página web
+            Escribinos
           </a>
         </nav>
       </div>

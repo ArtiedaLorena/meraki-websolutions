@@ -1,45 +1,47 @@
-import { outcomes, problems } from "@/lib/site";
+import { problems, textSectionPortraits } from "@/lib/site";
 import { Reveal } from "./Reveal";
+import { SidePortrait } from "./People";
 
 export function Problems() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:px-8">
-        <div>
-          <Reveal>
-            <p className="text-xs font-semibold tracking-[0.2em] text-royal uppercase">Dónde estás hoy</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-              El producto es bueno. La web no lo muestra.
-            </h2>
-          </Reveal>
-          <div className="mt-8 space-y-4">
-            {problems.map((item, index) => (
-              <Reveal key={item.title} delayMs={index * 70}>
-                <article className="rounded-2xl border border-line bg-mist p-5">
-                  <h3 className="font-display text-lg font-semibold text-navy">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-                </article>
-              </Reveal>
-            ))}
+    <section id="desafios" className="bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <Reveal>
+          <div className="flex items-end justify-between gap-5">
+            <div className="min-w-0 max-w-3xl">
+              <p className="text-[11px] font-semibold tracking-[0.22em] text-sky uppercase">
+                Diseño web a medida
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-navy sm:text-5xl">
+                Qué destrabamos cuando{" "}
+                <em className="italic text-primary">tu negocio tiene web</em>
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-navy/55">
+                No es un folleto online. Es el lugar donde te entienden, te creen y te escriben.
+                Más claridad para vos, más confianza para quien llega
+              </p>
+            </div>
+            <SidePortrait
+              src={textSectionPortraits.problems.src}
+              alt={textSectionPortraits.problems.alt}
+            />
           </div>
-        </div>
-        <div>
-          <Reveal>
-            <p className="text-xs font-semibold tracking-[0.2em] text-royal uppercase">Qué hacemos</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-              Una web clara que pide la consulta.
-            </h2>
-          </Reveal>
-          <div className="mt-8 space-y-4">
-            {outcomes.map((item, index) => (
-              <Reveal key={item.title} delayMs={index * 70}>
-                <article className="rounded-2xl border border-navy/10 bg-navy-deep p-5 text-white">
-                  <h3 className="font-display text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/70">{item.description}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+        </Reveal>
+
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {problems.map((item, index) => (
+            <Reveal key={item.n} delayMs={index * 60}>
+              <article className="flex h-full flex-col rounded-[1.5rem] border border-line bg-mist/40 p-6 sm:p-8">
+                <p className="font-display text-xs font-semibold tracking-[0.18em] text-turquoise">
+                  {item.n}
+                </p>
+                <h3 className="mt-4 font-display text-xl font-semibold leading-snug text-navy">
+                  “{item.said}”
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/55">{item.reply}</p>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

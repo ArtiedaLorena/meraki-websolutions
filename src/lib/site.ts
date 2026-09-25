@@ -3,7 +3,7 @@ export const site = {
   shortName: "Meraki",
   tagline: "WEB SOLUTIONS",
   description:
-    "Páginas web accesibles, mobile first y listas en pocos días. Tu sitio, online y listo para que te escriban.",
+    "Desarrollo web en Bernal, Quilmes y Zona Sur. Páginas a medida para que te encuentren en Google y te escriban por WhatsApp",
   locale: "es_AR",
   language: "es-AR",
   url:
@@ -11,212 +11,373 @@ export const site = {
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "http://localhost:3000"),
-  instagramUrl: "https://www.instagram.com/meraki.responsivewebs/",
-  instagramHandle: "@meraki.responsivewebs",
-  instagramDm: "https://ig.me/m/meraki.responsivewebs",
+  instagramUrl: "https://www.instagram.com/meraki.websolutionsok/",
+  instagramHandle: "@meraki.websolutionsok",
+  instagramDm: "https://ig.me/m/meraki.websolutionsok",
   whatsapp: "542214097909",
   whatsappDisplay: "+54 221 409-7909",
   whatsappMessage:
-    "Hola Meraki! Vi su web y quiero una página para mi emprendimiento, lista en pocos días. ¿Me cuentan cómo arrancamos?",
+    "Hola Meraki, quiero una página web para mi negocio. ¿Me cuentan precios y cómo arrancamos?",
+  currency: "ARS",
   location: {
     city: "Bernal",
     region: "Buenos Aires",
     area: "Zona Sur",
     country: "Argentina",
     countryCode: "AR",
+    nearby: ["Quilmes", "Berazategui", "Avellaneda", "Lanús", "Lomas de Zamora", "Temperley"],
   },
 } as const;
 
 export const navItems = [
-  { href: "#servicios", label: "Servicios" },
   { href: "#proyectos", label: "Trabajos" },
+  { href: "#precios", label: "Precios" },
   { href: "#proceso", label: "Proceso" },
-  { href: "#faq", label: "Preguntas" },
+  { href: "#servicios", label: "Servicios" },
   { href: "#contacto", label: "Contacto" },
 ] as const;
 
-export const heroChips = ["Accesible", "Pocos días", "Mobile first", "WhatsApp"] as const;
+export const heroChips = [
+  "A medida",
+  "WhatsApp",
+  "SEO",
+  "Sin plantillas",
+  "Trato directo",
+  "Precio en pesos",
+  "Mobile first",
+  "Diseño propio",
+] as const;
 
 export const stats = [
-  { value: "Pocos días", label: "Tu web al aire, sin esperas de meses" },
-  { value: "Accesible", label: "Pensada para tu emprendimiento" },
-  { value: "Mobile first", label: "Se ve impecable en el celular" },
-  { value: "Trato directo", label: "Hablás con quien hace la web" },
+  { value: "Desde $150.000", label: "Landing page en pesos" },
+  { value: "Pocos días", label: "De WhatsApp a web al aire" },
+  { value: "Diseño propio", label: "Sin plantillas genéricas" },
+  { value: "Trato directo", label: "Hablás con quien diseña" },
 ] as const;
 
-export const problems = [
-  {
-    title: "Tu Instagram está vivo. Tu web, no.",
-    description:
-      "El algoritmo esconde el perfil. Una web es el lugar estable donde Google y tus clientes te encuentran siempre.",
-  },
-  {
-    title: "Creés que una web es cara y tarda meses",
-    description:
-      "No tiene que ser así: sitios claros, accesibles y listos en pocos días, para que empieces a recibir consultas.",
-  },
-  {
-    title: "Se ve bien en la compu y se rompe en el celu",
-    description:
-      "La mayoría entra desde el teléfono. Si hay que hacer zoom para tocar un botón, se van.",
-  },
-] as const;
-
-export const outcomes = [
-  {
-    title: "Una web que vende",
-    description:
-      "Clara, rápida y con un camino obvio para que te escriban. Sin paquetes inflados ni letra chica.",
-  },
-  {
-    title: "Lista en pocos días",
-    description:
-      "Diseño, desarrollo y publicación en un sprint corto. Arrancás a recibir consultas rápido.",
-  },
-  {
-    title: "Perfecta en el celular",
-    description:
-      "Mobile first de verdad: se lee bien, carga rápido y el botón de WhatsApp está a un toque.",
-  },
+export const marqueeItems = [
+  "Maison Dorée",
+  "Estudio Merlo",
+  "Studiocrazy",
+  "Dra. Elena Vidal",
+  "Aurea Detail",
+  "A medida",
+  "WhatsApp",
+  "SEO",
+  "Diseño propio",
 ] as const;
 
 export const services = [
   {
-    title: "Tu página web",
+    n: "01",
+    title: "Diseño web",
     description:
-      "Landing o sitio claro para que te encuentren, entiendan qué hacés y te escriban. Accesible, sin recortar calidad.",
+      "Una página clara para presentar tu negocio, generar confianza y que te escriban. Nada de plantilla genérica",
   },
   {
-    title: "Entrega en pocos días",
+    n: "02",
+    title: "Sitios que venden",
     description:
-      "No esperás un trimestre. Coordinamos por WhatsApp, diseñamos, desarrollamos y publicamos en días.",
+      "Servicios, trabajos y un camino obvio al WhatsApp. Pensado para consultas reales, no para verse lindo y quedarse quieto",
   },
   {
-    title: "Hecha para que te contacten",
+    n: "03",
+    title: "Aparecé en Google",
     description:
-      "WhatsApp, Instagram y un formulario o turnos, según lo que necesites. El visitante no tiene que adivinar.",
+      "SEO desde el día uno: títulos, datos estructurados, velocidad y sitemap",
   },
   {
-    title: "Mobile first y SEO",
+    n: "04",
+    title: "Mobile first",
     description:
-      "Se ve impecable en el celu, carga rápido y sale con bases de SEO para que Google te encuentre.",
+      "La mayoría entra desde el celular. Se lee, se toca y carga bien acá, en el bondi o en el local",
   },
 ] as const;
 
 export const projects = [
   {
     tag: "Estética vehicular",
-    title: "Aurea Detail — Detailing en Temperley",
+    title: "Aurea Detail",
+    subtitle: "Detailing",
     description:
-      "Estudio de detailing con servicios, turnos por WhatsApp y una estética precisa para quienes quieren el auto como recién salido del taller.",
+      "Servicios, turnos por WhatsApp y una estética precisa. Hecha para el negocio, no para un portfolio genérico",
     href: "https://aurea-detail.vercel.app/",
     host: "aurea-detail.vercel.app",
-    image: "/projects/aurea-detail.webp",
-    imageAlt: "Captura del sitio Aurea Detail: estética vehicular en Temperley",
+    image: "/projects/aurea-detail-desktop.png",
+    imageMobile: "/projects/aurea-detail-mobile.png",
+    imageAlt: "Sitio web de Aurea Detail, estética vehicular en Temperley, Zona Sur",
   },
   {
     tag: "Estudio de belleza",
-    title: "Studiocrazy — Uñas & Pestañas",
+    title: "Studiocrazy",
+    subtitle: "Uñas y pestañas",
     description:
-      "Turnos online, servicios y una estética dark con glow rosa para un estudio de uñas y pestañas.",
+      "Turnos, servicios y un look dark con glow rosa. El estudio se entiende en diez segundos desde el celu",
     href: "https://crazy-studio.vercel.app/",
     host: "crazy-studio.vercel.app",
-    image: "/projects/crazy-studio.webp",
-    imageAlt: "Captura del sitio Studiocrazy: uñas y pestañas",
+    image: "/projects/crazy-studio-desktop.png",
+    imageMobile: "/projects/crazy-studio-mobile.png",
+    imageAlt: "Sitio web de Studiocrazy, estudio de uñas y pestañas",
   },
   {
     tag: "Consultorio médico",
-    title: "Dra. Elena Vidal — Dermatología",
+    title: "Dra. Elena Vidal",
+    subtitle: "Dermatología",
     description:
-      "Sitio médico con patologías, control de lunares, coberturas y reserva de turnos. Profesional, cálido y pensado para convertir consultas.",
+      "Patologías, coberturas y reserva de turnos. Un sitio que transmite confianza y pide la consulta",
     href: "https://dermatologia-vidal.vercel.app/",
     host: "dermatologia-vidal.vercel.app",
-    image: "/projects/dermatologia-vidal.webp",
-    imageAlt: "Captura del sitio de la Dra. Elena Vidal, dermatóloga en Palermo",
+    image: "/projects/dermatologia-vidal-desktop.png",
+    imageMobile: "/projects/dermatologia-vidal-mobile.png",
+    imageAlt: "Sitio web de la Dra. Elena Vidal, dermatóloga",
+  },
+  {
+    tag: "Estudio jurídico",
+    title: "Estudio Merlo",
+    subtitle: "Derecho corporativo",
+    description:
+      "Landing para una abogada: societario, inmobiliario y patrimonial, con consulta clara y un tono serio que transmite confianza",
+    href: "https://landing-estudio-merlo.vercel.app/",
+    host: "landing-estudio-merlo.vercel.app",
+    image: "/projects/estudio-merlo-desktop.png",
+    imageMobile: "/projects/estudio-merlo-mobile.png",
+    imageAlt: "Sitio web de Estudio Merlo, derecho corporativo e inmobiliario en Buenos Aires",
+  },
+  {
+    tag: "Restaurante",
+    title: "Maison Dorée",
+    subtitle: "Fine dining",
+    description:
+      "Carta, reservas por WhatsApp y una estética premium. Un sitio que invita a reservar mesa, no a mirar y salir",
+    href: "https://maison-doree-psi.vercel.app/",
+    host: "maison-doree-psi.vercel.app",
+    image: "/projects/maison-doree-desktop.png",
+    imageMobile: "/projects/maison-doree-mobile.png",
+    imageAlt: "Sitio web de Maison Dorée, restaurante de fine dining en Recoleta, Buenos Aires",
   },
 ] as const;
+
+function projectByHost(host: string) {
+  const project = projects.find((item) => item.host === host);
+  if (!project) {
+    throw new Error(`Unknown project host: ${host}`);
+  }
+  return project;
+}
+
+export const heroProject = projectByHost("maison-doree-psi.vercel.app");
+
+export const authorityShots = {
+  featured: projectByHost("landing-estudio-merlo.vercel.app"),
+  second: projectByHost("crazy-studio.vercel.app"),
+  third: projectByHost("dermatologia-vidal.vercel.app"),
+  phones: [
+    projectByHost("maison-doree-psi.vercel.app"),
+    projectByHost("crazy-studio.vercel.app"),
+    projectByHost("aurea-detail.vercel.app"),
+    projectByHost("dermatologia-vidal.vercel.app"),
+  ],
+} as const;
 
 export const processSteps = [
   {
     step: "01",
     time: "Hoy",
-    title: "Nos escribís",
+    title: "Charlamos",
     description:
-      "Un WhatsApp alcanza: qué hacés y si ya tenés logo o Instagram. Te respondemos con cómo arrancar.",
+      "WhatsApp o una llamada corta. Qué vendés, a quién, y qué tiene que lograr la web",
   },
   {
     step: "02",
     time: "1–2 días",
     title: "Diseñamos",
     description:
-      "Estructura mobile first y una propuesta visual alineada a tu marca. Lo ves, lo comentás, avanzamos.",
+      "Estructura y visuales con tu marca. Lo ves, lo comentás, avanzamos",
   },
   {
     step: "03",
     time: "Pocos días",
     title: "Desarrollamos",
     description:
-      "Código moderno, SEO y WhatsApp. Probamos en celu y escritorio.",
+      "Código propio, SEO local y WhatsApp. Probamos en celu y escritorio",
   },
   {
     step: "04",
     time: "Al aire",
     title: "Publicamos",
     description:
-      "Tu web queda online y lista para recibir consultas. Seguimos cerca por si hay un ajuste.",
+      "Dominio, velocidad y un sitio listo para que te escriban",
   },
 ] as const;
 
-export const reasons = [
+export const plans = [
   {
-    title: "Trato directo",
-    description:
-      "Hablás con quien hace la web. Sin capas, sin demoras: coordinamos por WhatsApp y avanzamos.",
+    name: "Landing",
+    price: "150.000",
+    note: "Una página para captar consultas",
+    time: "Lista en pocos días",
+    featured: false,
+    items: [
+      "Diseño a medida",
+      "Adaptada a celular",
+      "Botón de WhatsApp",
+      "SEO básico local",
+      "Publicación incluida",
+    ],
   },
   {
-    title: "Accesible, sin recortar calidad",
-    description:
-      "El foco son emprendimientos que necesitan una web seria ya: clara, rápida y que se vea bien en el celular.",
+    name: "Web de negocio",
+    price: "450.000",
+    note: "La más pedida",
+    time: "Sitio completo",
+    featured: true,
+    items: [
+      "Hasta 5 secciones",
+      "Diseño 100% a medida",
+      "SEO técnico de base",
+      "WhatsApp en toda la web",
+      "Google Analytics",
+      "Publicación y ajustes de arranque",
+    ],
   },
   {
-    title: "Pocos días, no meses",
-    description:
-      "Un proceso corto. Vemos avances rápido y publicamos cuando está lista para traerte consultas.",
+    name: "Web con turnos",
+    price: "520.000",
+    note: "Para estudios, consultorios y locales",
+    time: "Reservas y contacto",
+    featured: false,
+    items: [
+      "Todo lo de Web de negocio",
+      "Turnos o reservas",
+      "Servicios y galería",
+      "Integración con Instagram",
+      "Pensada para convertir consultas",
+    ],
+  },
+] as const;
+
+export const testimonials = [
+  {
+    quote:
+      "La web se siente tan prolija como el trabajo sobre el auto. Oscura, precisa y con el turno a un toque",
+    name: "Aurea Detail",
+    role: "Estética vehicular",
+    photo: "/people/portrait-detailer.png",
+    photoAlt: "Retrato ilustrativo para un negocio de estética vehicular",
+    image: "/projects/aurea-detail-desktop.png",
+    imageAlt: "Sitio web de Aurea Detail, estética vehicular en Temperley, Zona Sur",
+  },
+  {
+    quote:
+      "El glow, los turnos y el tono del estudio quedaron como los teníamos en la cabeza, sobre todo en el celular",
+    name: "Studiocrazy",
+    role: "Uñas y pestañas",
+    photo: "/people/portrait-beauty.png",
+    photoAlt: "Retrato ilustrativo para un estudio de belleza",
+    image: "/projects/crazy-studio-desktop.png",
+    imageAlt: "Sitio web de Studiocrazy, estudio de uñas y pestañas",
+  },
+  {
+    quote:
+      "Pasa confianza desde el primer scroll. Clara, cálida y hecha para que pidan un turno",
+    name: "Dra. Elena Vidal",
+    role: "Dermatología",
+    photo: "/people/portrait-clinic.png",
+    photoAlt: "Retrato ilustrativo para un consultorio de dermatología",
+    image: "/projects/dermatologia-vidal-desktop.png",
+    imageAlt: "Sitio web de la Dra. Elena Vidal, dermatóloga",
+  },
+  {
+    quote:
+      "Entrá y se entiende que es un estudio serio. La consulta está a un toque, sin plantilla de abogado genérica",
+    name: "Estudio Merlo",
+    role: "Derecho corporativo",
+    photo: "/people/portrait-lawyer.png",
+    photoAlt: "Retrato ilustrativo para un estudio jurídico",
+    image: "/projects/estudio-merlo-desktop.png",
+    imageAlt: "Sitio web de Estudio Merlo, derecho corporativo e inmobiliario en Buenos Aires",
+  },
+  {
+    quote:
+      "Se siente el restaurante desde el primer scroll. Carta, reserva y una estética que pide mesa",
+    name: "Maison Dorée",
+    role: "Fine dining",
+    photo: "/people/portrait-chef.png",
+    photoAlt: "Retrato ilustrativo para un restaurante de fine dining",
+    image: "/projects/maison-doree-desktop.png",
+    imageAlt: "Sitio web de Maison Dorée, restaurante de fine dining en Recoleta, Buenos Aires",
+  },
+] as const;
+
+export const textSectionPortraits = {
+  problems: {
+    src: "/people/portrait-shop-owner.png",
+    alt: "Retrato ilustrativo de una dueña de negocio revisando consultas en el celular",
+  },
+  services: {
+    src: "/people/portrait-cafe.png",
+    alt: "Retrato ilustrativo de un profesional trabajando en su sitio web",
+  },
+} as const;
+
+export const problems = [
+  {
+    n: "01",
+    said: "Me escriben por redes y después se enfría",
+    reply:
+      "La web ordena lo que hacés, muestra prueba y deja un WhatsApp a un toque. El interesado no tiene que adivinar si sos serio",
+  },
+  {
+    n: "02",
+    said: "Quiero que me encuentren, pero no entiendo el SEO",
+    reply:
+      "Dejamos títulos, estructura y velocidad listos para Google. Si más adelante hay pauta, la web ya está preparada para convertir el clic",
+  },
+  {
+    n: "03",
+    said: "Con una plantilla no me alcanza",
+    reply:
+      "Turnos, servicios, catálogo o un flujo raro: lo armamos a medida. Hablás con quien diseña, sin un formulario eterno",
+  },
+  {
+    n: "04",
+    said: "Sé que necesito web, no sé por dónde entrar",
+    reply:
+      "Te ordenamos qué conviene ahora, qué puede esperar, y te vamos con un plan en pesos, claro",
   },
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Cómo arrancamos?",
+    question: "¿Cuánto sale una página web?",
     answer:
-      "Escribinos por WhatsApp al +54 221 409-7909. Contanos qué hacés y si ya tenés logo o Instagram. Con eso te decimos cómo sigue, sin compromiso.",
+      "Landing desde $150.000, web de negocio $450.000 y web con turnos $520.000. Precio final en pesos argentinos, sin sorpresas en dólares",
+  },
+  {
+    question: "¿Puedo pagar en pesos?",
+    answer:
+      "Sí. Todos los planes se cotizan y se cobran en pesos argentinos",
   },
   {
     question: "¿Cuánto tarda?",
     answer:
-      "Páginas web en pocos días. No trabajamos con plazos de meses: el espíritu es que salgas al aire rápido y empieces a recibir consultas.",
+      "Páginas web en pocos días, no en meses. El plazo lo cerramos cuando vemos el alcance y tu contenido",
   },
   {
-    question: "¿Qué incluye?",
+    question: "¿La web aparece en Google?",
     answer:
-      "Diseño, desarrollo, publicación, versión mobile, bases de SEO y el contacto que uses (WhatsApp, Instagram, turnos). Lo justo para que la web trabaje por vos.",
+      "Sale con SEO técnico: títulos, descripciones, datos estructurados, sitemap y velocidad. Google entiende qué hacés y cómo contactarte",
   },
   {
-    question: "¿La web se ve bien en el celular?",
+    question: "¿Usan plantillas o inteligencia artificial para diseñar?",
     answer:
-      "Sí. Diseñamos primero para el teléfono —donde entra la mayoría del tráfico— y después adaptamos tablet y escritorio.",
-  },
-  {
-    question: "¿Incluye SEO?",
-    answer:
-      "Cada sitio sale con títulos, descripciones, datos estructurados, sitemap y velocidad. Google tiene que entender qué hacés desde el primer día.",
-  },
-  {
-    question: "¿Puedo seguir usando Instagram?",
-    answer:
-      "Sí. Instagram es el escaparate; la web es la casa. Las vinculamos con botones, galería y un lugar estable para servicios y contacto.",
+      "No. Cada sitio se arma a medida de tu marca. La IA no reemplaza el criterio ni el ojo de quien diseña y habla con vos",
   },
 ] as const;
+
+export function formatArs(amount: string) {
+  return `$ ${amount}`;
+}
 
 export function whatsappUrl(text: string = site.whatsappMessage) {
   const number = site.whatsapp.replace(/\D/g, "");

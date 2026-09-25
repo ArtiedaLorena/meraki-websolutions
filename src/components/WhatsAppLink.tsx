@@ -28,10 +28,16 @@ export function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) 
 }
 
 export const ctaPrimary =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-navy px-7 text-sm font-semibold text-white shadow-[0_12px_32px_rgba(18,32,71,0.22)] transition hover:bg-royal";
+  "btn-pill btn-gradient";
+
+export const ctaSecondary =
+  "btn-pill btn-outline-light";
 
 export const ctaOnDark =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-7 text-sm font-semibold text-navy transition hover:bg-mist";
+  "btn-pill btn-gradient";
+
+export const ctaGhostOnDark =
+  "btn-pill btn-outline";
 
 export const ctaCompact =
-  "inline-flex items-center justify-center rounded-full bg-navy text-white shadow-sm transition hover:bg-royal";
+  "btn-gradient inline-flex items-center justify-center rounded-full text-white";

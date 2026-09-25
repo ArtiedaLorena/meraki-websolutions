@@ -1,25 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { StickyCta } from "@/components/StickyCta";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const body = Plus_Jakarta_Sans({
+const body = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
-const display = Outfit({
+const display = Poppins({
   variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#122047",
+  themeColor: "#0F172A",
   width: "device-width",
   initialScale: 1,
 };
@@ -27,16 +29,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Meraki Web Solutions | Páginas web accesibles en pocos días",
+    default: "Desarrollo web en Bernal, Quilmes y Zona Sur | Meraki",
     template: "%s | Meraki Web Solutions",
   },
   description: site.description,
   keywords: [
-    "páginas web",
-    "páginas web accesibles",
-    "diseño web",
-    "web en pocos días",
-    "mobile first",
+    "desarrollo web Buenos Aires",
+    "desarrollo web Zona Sur",
+    "desarrollo web Quilmes",
+    "desarrollo web Bernal",
+    "diseño web Bernal",
+    "páginas web Quilmes",
+    "agencia web Zona Sur",
     "Meraki Web Solutions",
   ],
   authors: [{ name: site.name, url: site.instagramUrl }],
@@ -52,12 +56,12 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.name,
-    title: "Meraki Web Solutions | Páginas web accesibles en pocos días",
+    title: "Desarrollo web en Bernal, Quilmes y Zona Sur | Meraki",
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meraki Web Solutions | Páginas web accesibles en pocos días",
+    title: "Desarrollo web en Bernal, Quilmes y Zona Sur | Meraki",
     description: site.description,
   },
   robots: {
@@ -70,6 +74,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
+  },
+  other: {
+    "geo.region": "AR-B",
+    "geo.placename": "Bernal, Buenos Aires",
   },
 };
 

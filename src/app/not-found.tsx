@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { ctaPrimary } from "@/components/WhatsAppLink";
 
 export default function NotFound() {
   return (
     <main id="contenido" className="mx-auto flex min-h-[70vh] max-w-xl flex-col items-center justify-center px-6 text-center">
-      <p className="text-xs font-semibold tracking-[0.2em] text-royal uppercase">404</p>
-      <h1 className="mt-3 font-display text-3xl font-semibold text-navy">Esta página no existe.</h1>
-      <p className="mt-3 text-muted">Volvé al inicio para ver servicios, proceso y contacto de Meraki Web Solutions.</p>
+      <p className="text-[11px] font-semibold tracking-[0.22em] text-sky uppercase">404</p>
+      <h1 className="mt-3 font-display text-3xl font-semibold text-navy">Esta página no existe</h1>
+      <p className="mt-3 text-navy/55">Volvé al inicio para ver trabajos, oferta y contacto de Meraki</p>
       <Link
         href="/"
-        className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-navy px-6 text-sm font-semibold text-white"
+        className={`mt-8 ${ctaPrimary}`}
       >
         Ir al inicio
       </Link>

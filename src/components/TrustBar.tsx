@@ -2,13 +2,15 @@ import { stats } from "@/lib/site";
 
 export function TrustBar() {
   return (
-    <section aria-label="Por qué Meraki" className="border-y border-line bg-navy-deep">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 md:grid-cols-4 lg:px-8">
+    <section aria-label="Enfoque de trabajo" className="border-y border-white/10 bg-navy">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px sm:grid-cols-4">
         {stats.map((item) => (
-          <p key={item.value} className="text-center md:text-left">
-            <span className="block font-display text-lg font-semibold text-white sm:text-xl">{item.value}</span>
-            <span className="mt-1 block text-xs leading-relaxed text-white/60">{item.label}</span>
-          </p>
+          <div key={item.value} className="px-4 py-7 text-center sm:py-8">
+            <p className="font-display text-sm font-semibold tracking-tight text-white sm:text-base">
+              {item.value}
+            </p>
+            <p className="mt-1 text-[11px] leading-snug text-white/50 sm:text-xs">{item.label}</p>
+          </div>
         ))}
       </div>
     </section>

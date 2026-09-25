@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Meraki Web Solutions — páginas web accesibles, listas en pocos días";
+export const alt = "Meraki Web Solutions — desarrollo web en Bernal, Quilmes y Zona Sur";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,30 +15,30 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 72,
-          background: "linear-gradient(135deg, #0a1530 0%, #122047 42%, #163a86 100%)",
+          background: "linear-gradient(135deg, #0F172A 0%, #1E3A8A 55%, #0EA5E9 100%)",
           color: "white",
         }}
       >
         <div
           style={{
             display: "flex",
-            width: 84,
-            height: 84,
-            borderRadius: 24,
+            width: 72,
+            height: 72,
+            borderRadius: 999,
             alignItems: "center",
             justifyContent: "center",
-            background: "linear-gradient(135deg, #1a4fad, #14c8c4)",
-            fontSize: 42,
+            background: "#14B8A6",
+            fontSize: 32,
             fontWeight: 700,
           }}
         >
           M
         </div>
-        <div style={{ marginTop: 36, fontSize: 64, fontWeight: 700, letterSpacing: -1.5 }}>
+        <div style={{ marginTop: 36, fontSize: 58, fontWeight: 700, letterSpacing: -1.5 }}>
           Meraki Web Solutions
         </div>
-        <div style={{ marginTop: 16, fontSize: 28, color: "#3ee0d8", maxWidth: 820 }}>
-          Páginas web accesibles, listas en pocos días.
+        <div style={{ marginTop: 16, fontSize: 26, color: "#F1F5F9", maxWidth: 880 }}>
+          Desarrollo web en Bernal, Quilmes y Zona Sur
         </div>
       </div>
     ),
